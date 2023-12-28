@@ -25,6 +25,7 @@ point_arrivee = pygame.image.load("img/element_labyrinthe/PORTE.svg")
 point_depart = pygame.image.load("img/element_labyrinthe/start.svg")
 fond_gris = pygame.image.load("img/fondGris.svg")
 img_accueil = pygame.image.load("img/EscEpsi.png")
+img_choix_perso = pygame.image.load("img/menuChoixJoueurs.png")
 img_aide = pygame.image.load("img/aide.png")
 fond_entre_niv = pygame.image.load("img/fondEntrePage.png")
 joueur_hugo = pygame.image.load("img/player/hugo.svg")
@@ -37,6 +38,7 @@ joueur_img = joueur_anais
 fond_gris = pygame.transform.scale(fond_gris, (largeur, hauteur))
 img_accueil = pygame.transform.scale(img_accueil, (largeur, hauteur))
 img_aide = pygame.transform.scale(img_aide, (largeur, hauteur))
+img_choix_perso = pygame.transform.scale(img_choix_perso, (largeur, hauteur))
 fond_entre_niv = pygame.transform.scale(fond_entre_niv, (largeur, hauteur))
 joueur_hugo = pygame.transform.scale(joueur_hugo, (largeur / 3, hauteur / 3))
 joueur_anais = pygame.transform.scale(joueur_anais, (largeur / 3, hauteur / 3))
@@ -212,8 +214,7 @@ while not done:
     # si on se trouve au menu
     if avancement == 0:
         if selection_joueur:
-            fenetre.blit(joueur_hugo, (0, 0))
-            fenetre.blit(joueur_anais, (200, 0))
+            fenetre.blit(img_choix_perso, (0, 0))
         elif aide:
             fenetre.blit(img_aide, (0, 0))
 
